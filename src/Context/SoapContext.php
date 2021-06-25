@@ -31,6 +31,7 @@ class SoapContext extends RawSoapContext
     private $value;
     private $fault;
 
+
     /**
      * Sets the WSDL for the next SOAP request.
      *
@@ -286,5 +287,29 @@ class SoapContext extends RawSoapContext
         }
 
         $this->setHeaders($soapHeaders);
+    }
+
+    /**
+     * @Given I read response property :property
+     */
+    public function iReadResponseProperty($property)
+    {
+        return $this->extractResponseProperty($property);
+    }
+
+    /**
+     * @Given I read response property :property and convert to base64
+     */
+    public function iReadResponsePropertyAndConvertToBase64($property)
+    {
+        return base64_encode($this->extractResponseProperty($property));
+    }
+
+    /**
+     * @Given print complete raw response
+     */
+    public function iReadCompleteRawResponse()
+    {
+        echo (string) $this->getRawResponse();
     }
 }
