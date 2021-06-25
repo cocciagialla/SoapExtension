@@ -19,7 +19,7 @@
     "php": ">=5.5",
     "behat/behat": ">=3.0.6",
     "behat/environment-loader": "1.*",
-    "phpunit/phpunit": "4 - 5"
+    "phpunit/phpunit": ">=4"
   },
   "autoload": {
     "psr-4": {
