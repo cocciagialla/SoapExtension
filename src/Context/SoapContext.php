@@ -5,7 +5,7 @@
 namespace Behat\SoapExtension\Context;
 
 use Symfony\Component\Yaml\Yaml;
-use PHPUnit_Framework_Assert as Assertions;
+use PHPUnit\Framework\Assert as Assertions;
 // Argument processors.
 use Behat\Gherkin\Node\TableNode;
 use Behat\Gherkin\Node\PyStringNode;
